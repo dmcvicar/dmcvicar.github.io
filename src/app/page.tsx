@@ -1,25 +1,28 @@
 // app/page.tsx
 'use client'
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+
+import { Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react'
+import About from './about'
+import ContactForm from './contact'
+import Home from './home'
 
 export default function Page() {
   return (
-    <Tabs>
+    <Tabs size="lg">
       <TabList>
         <Tab>Home</Tab>
         <Tab>About</Tab>
-        <Tab>Contect</Tab>
+        <Tab>Contact</Tab>
       </TabList>
-
       <TabPanels>
         <TabPanel>
-          <p>Home.</p>
+          <Home/>
         </TabPanel>
         <TabPanel>
-          <p>About!</p>
+          <About/>
         </TabPanel>
         <TabPanel>
-          <p>Contact!!!</p>
+          <ContactForm/>
         </TabPanel>
       </TabPanels>
     </Tabs>
