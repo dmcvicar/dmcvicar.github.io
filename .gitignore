@@ -11,8 +11,7 @@
 
 # next.js
 /.next/
-# /out/ is needed to publish the app on github pages
-# /out/
+/out/
 
 # production
 /build
