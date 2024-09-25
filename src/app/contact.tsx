@@ -1,4 +1,4 @@
-import { Box, Link, Heading, Flex, Button } from '@chakra-ui/react'
+import { Box, Link, Heading, Button } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon, Icon } from '@chakra-ui/icons'
 import { ElementType } from 'react'
 

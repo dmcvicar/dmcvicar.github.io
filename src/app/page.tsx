@@ -1,7 +1,7 @@
 // app/page.tsx
 'use client'
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Text} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import About from './about'
 import Contact from './contact'
 import Products from './products'
