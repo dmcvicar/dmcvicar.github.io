@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/react'
+import { Box, Link, Heading, Flex, Button } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon, Icon } from '@chakra-ui/icons'
 import { ElementType } from 'react'
 
@@ -18,29 +18,33 @@ function ContactInfo (props: {_Icon: ElementType; href: string | undefined; _tex
     )
 }
 
-function LinkedInIcon(props: { marginRight: string }) {
+function LinkedInIcon(props: { marginRight: string; color: string }) {
     return (
         <Icon marginRight={props.marginRight}>
-            <path fill="blue" d={LINKEDIN_SVG} />
+            <path fill={props.color ? "props.color" : "white"} d={LINKEDIN_SVG} />
         </Icon>
     )
 }
 
-function GitHubIcon(props: { marginRight: string }) {
+function GitHubIcon(props: { marginRight: string; marginLeft: string; color: string}) {
     return (
-        <Icon marginRight={props.marginRight}>
-            <path fill="black" d={GITHUB_SVG} />
+        <Icon marginRight={props.marginRight} marginLeft={props.marginLeft}>
+            <path fill={props.color ? props.color : "white"} d={GITHUB_SVG} />
         </Icon>
     )
 }
 
-export default function ContactForm() {
+export default function Contact() {
     return (
-        <Box>
-            <ContactInfo _Icon={EmailIcon} href={"mailto:" + EMAIL} _text={EMAIL} />
-            <ContactInfo _Icon={PhoneIcon} href={undefined} _text={PHONE}  />
-            <ContactInfo _Icon={LinkedInIcon} href="https://www.linkedin.com/in/dwmcvicar" _text="linkedin.com/in/dwmcvicar"  />
-            <ContactInfo _Icon={GitHubIcon} href="https://github.com/dmcvicar" _text="github.com/dmcvicar"  />
+        <Box display="flex" justifyContent="space-between" alignItems="center" backgroundColor="gray.600" color="white" paddingRight="200px" paddingLeft="100px" paddingTop="50px" paddingBottom="50px">
+            <Link href="https://github.com/dmcvicar/mlops-website"><Button colorScheme="gray" color="Black">View Website on GitHub<GitHubIcon marginRight="undefined" marginLeft="5px" color="black"/></Button></Link>
+            <Box>
+                <Heading as="h3" size="md">Contact</Heading>
+                <ContactInfo _Icon={EmailIcon} href={"mailto:" + EMAIL} _text={EMAIL} />
+                <ContactInfo _Icon={PhoneIcon} href={undefined} _text={PHONE}  />
+                <ContactInfo _Icon={LinkedInIcon} href="https://www.linkedin.com/in/dwmcvicar" _text="linkedin.com/in/dwmcvicar"  />
+                <ContactInfo _Icon={GitHubIcon} href="https://github.com/dmcvicar" _text="github.com/dmcvicar"  />
+            </Box>
         </Box>
     )
 }

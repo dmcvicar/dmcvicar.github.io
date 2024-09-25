@@ -1,14 +1,23 @@
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Image, Center, VStack } from '@chakra-ui/react'
+import type { COMPANY_INFO_TYPE } from './page'
 
-export default function About() {
+interface AboutProps {
+    company_info: COMPANY_INFO_TYPE
+}
+
+export default function About({ company_info }: AboutProps) {
     return (
-        <Box maxW='lg' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-            <Image src="https://media.licdn.com/dms/image/v2/D4E03AQHrePyWR1oT-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725897956548?e=1732752000&v=beta&t=ELM0Dl0gYse6JwVXcx6TaNXL95w0gRPChUTVY4clyOs" alt="Dave" />
-            <Box p='6'>
-                <Box display='flex' alignItems='baseline'>
-                    <p>Hire me pls.</p>
-                </Box>
+        <Center>
+            <Box width="500px">
+                <VStack>
+                    <Image src="/images/dave.png" alt="Dave" boxSize="500px" padding="10px"/>
+                        <Box p='6'>
+                            <Box display='flex' alignItems='baseline'>
+                                <p>David McVicar is the founder and sole proprieter of {company_info.company_name}.</p>
+                            </Box>
+                        </Box>
+                </VStack>
             </Box>
-        </Box>
+        </Center>
     )
 }

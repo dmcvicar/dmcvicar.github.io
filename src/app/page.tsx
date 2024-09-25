@@ -1,30 +1,41 @@
 // app/page.tsx
 'use client'
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Text} from '@chakra-ui/react'
 import About from './about'
-import ContactForm from './contact'
-import Home from './home'
+import Contact from './contact'
+import Products from './products'
+
+interface COMPANY_INFO_TYPE {
+  company_name: string
+}
+
+const COMPANY_INFO: COMPANY_INFO_TYPE = {
+  company_name: "MLOps Solutions"
+}
 
 export default function Page() {
   return (
-    <Tabs size="lg">
-      <TabList>
-        <Tab>Home</Tab>
-        <Tab>About</Tab>
-        <Tab>Contact</Tab>
-      </TabList>
-      <TabPanels>
-        <TabPanel>
-          <Home/>
-        </TabPanel>
-        <TabPanel>
-          <About/>
-        </TabPanel>
-        <TabPanel>
-          <ContactForm/>
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
+    <div>
+    {/* <Container w="100%" margin="0px" padding="0px"> */}
+      <Tabs size="lg">
+        <TabList>
+          <Tab>{COMPANY_INFO.company_name}</Tab>
+          <Tab>Products</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <About company_info={COMPANY_INFO}/>
+          </TabPanel>
+          <TabPanel>
+            <Products/>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+      <Contact />
+    {/* </Container> */}
+    </div>
   )
 }
+
+export type { COMPANY_INFO_TYPE }
