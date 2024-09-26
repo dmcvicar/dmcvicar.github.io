@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && git commit -m \"Auto-commit: Deploy Pages\" && git push --set-upstream origin main"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

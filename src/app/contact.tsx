@@ -36,8 +36,8 @@ function GitHubIcon(props: { marginRight: string; marginLeft: string; color: str
 
 export default function Contact() {
     return (
-        <Box display="flex" justifyContent="space-between" alignItems="center" backgroundColor="gray.600" color="white" paddingRight="200px" paddingLeft="100px" paddingTop="50px" paddingBottom="50px">
-            <Link href="https://github.com/dmcvicar/dmcvicar.github.io"><Button colorScheme="gray" color="Black">View Website on GitHub<GitHubIcon marginRight="undefined" marginLeft="5px" color="black"/></Button></Link>
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between" alignItems="center" backgroundColor="gray.600" color="white" paddingRight="200px" paddingLeft="100px" paddingTop="50px" paddingBottom="50px">
+            <Link href="https://github.com/dmcvicar/dmcvicar.github.io"><Button colorScheme="gray" color="Black" marginBottom="20px">View Website on GitHub<GitHubIcon marginRight="undefined" marginLeft="5px" color="black"/></Button></Link>
             <Box>
                 <Heading as="h3" size="md">Contact</Heading>
                 <ContactInfo _Icon={EmailIcon} href={"mailto:" + EMAIL} _text={EMAIL} />

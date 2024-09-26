@@ -10,7 +10,7 @@ export default function About({ company_info }: AboutProps) {
         <Center>
             <Box width="500px">
                 <VStack>
-                    <Image src="/images/dave.png" alt="Dave" boxSize="500px" padding="10px"/>
+                    <Image src="/images/dave.png" objectFit="contain" alt="Dave" boxSize="500px" padding="10px"/>
                         <Box p='6'>
                             <Box display='flex' alignItems='baseline'>
                                 <p>David McVicar is the founder and sole proprieter of {company_info.company_name}.</p>
