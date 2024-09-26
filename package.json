@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && touch docs/.nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && git commit -m \"Auto-commit: Deploy Pages\" && git push --set-upstream origin main"
+    "deploy": "next build && touch docs/.nojekyll && git commit -am \"auto-commit - deploy pages\" && git push --set-upstream origin main"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
