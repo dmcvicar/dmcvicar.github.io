@@ -1,8 +1,8 @@
 import { Box, Image, Center, VStack } from '@chakra-ui/react'
-import type { CONTENT_TYPE } from './page'
+import type { Content } from './types'
 
 interface AboutProps {
-    content: CONTENT_TYPE
+    content: Content
 }
 
 export default function About({ content }: AboutProps) {
