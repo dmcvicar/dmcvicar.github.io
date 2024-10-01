@@ -23,7 +23,7 @@ interface ContactInfoProps {
 
 function ContactInfo({ site_info }: ContactInfoProps) {
     return (
-        <Link display="flex" alignItems="center" href={site_info.uri}>
+        <Link key={site_info.text} display="flex" alignItems="center" href={site_info.uri}>
             {site_info.icon ? site_info.icon : <ContactIcon marginRight="8px" icon_svg={site_info.icon_svg} color={site_info.icon_color} />}
             {site_info.text}
         </Link>

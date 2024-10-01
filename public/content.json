@@ -1,5 +1,5 @@
 {
-    "about": "David McVicar is a machine learning operations (MLOps) sole proprieter based out of Denver, Colorado. He has 10+ years experience designing cloud-based enterprise machine learning and big data products, with additional expertise on enterprise APIs, data pipelining, CI/CD, and scalable cloud infrastructure.",
+    "about": "David McVicar is a machine learning operations (MLOps) sole proprieter based out of Denver, Colorado. He has 10+ years experience designing cloud-based enterprise machine learning and big data products, with additional expertise with enterprise APIs, data pipelining, CI/CD, and scalable cloud infrastructure.",
     "button_text": "View Website on GitHub",
     "home_text": "David McVicar",
     "phone": "+1 (703) 881-8757",
@@ -19,7 +19,114 @@
     "experience": {
         "title": "Experience",
         "items": [
-
+            {
+                "title": "Blacksky",
+                "subtitles": [
+                    {
+                        "text": "Staff MLOps Engineer",
+                        "bold": true
+                    },
+                    {"text": "January 2021 – July 2024"},
+                    {"text": "Remote"}
+                ],
+                "blurbs": [
+                    "Provided software design and DevOps support on a core project to identify construction sites in satellite imagery using segmentation models at scale.",
+                    "Authored a STAC imagery ETL engine to create time-series distributed “data cubes” of imagery using Dask, for use in model training and inference processes. This library processed 34 million square kilometers of Sentinel2 L2A imagery at a cost of less that $0.10 per square kilometer.",
+                    "Developed a set of CloudFormation Templates and Helm Charts to bootstrap several Kubernetes environments containing a suite of machine learning applications which enabled an economical and scalable machine learning workflow for data scientists.",
+                    "Designed a PostGIS PostgreSQL database to store millions of annotations, with associated scripts to efficiently export several thousands of them to stakeholders.",
+                    "Created Airflow DAGs to automatically ingest annotations related metrics produced by segmentation models to support manual and automated QA."
+                ],
+                "image": "blacksky.webp",
+                "image_color": "#0a4e8a"
+            },
+            {
+                "title": "Ibotta",
+                "subtitles": [
+                    {
+                        "text": "Senior Software Engineer",
+                        "bold": true
+                    },
+                    {"text": "March 2020 – January 2021"},
+                    {"text": "Denver, CO"}
+                ],
+                "blurbs": [
+                    "Made core contributions to several microservices related to building Audiences for use in the Ibotta app.",
+                    "Aided in the reduction of a monolithic application into a series of microservices.",
+                    "Authored several tools using Python and Airflow for use in deploying targeted coupons based on data-science-driven models."
+                ],
+                "image": "ibotta.svg"
+            },
+            {
+                "title": "Code3",
+                "subtitles": [
+                    {
+                        "text": "Senior Software Engineer",
+                        "bold": true
+                    },
+                    {"text": "August 2016 – March 2020"},
+                    {"text": "Washington, DC"},
+                    {
+                        "text": "(Formerly SocialCode)"
+                    }
+                ],
+                "blurbs": [
+                    "Designed, developed, and maintained features throughout the application stack of a core software offering on an Agile team.",
+                    "Engineered efficient Python API endpoints using Django REST Framework JSON API that triggered ETL workflows, performed high-volume aggregate queries, and supported a web application front end.",
+                    "Pioneered the use of Airflow through prototypes, facilitating learning sessions, authoring company-specific plugins, and developing a Docker-based Airflow deployment system in Amazon ECS. Airflow became the de-facto job scheduling tool across the company through these efforts.",
+                    "Designed and developed a third-party data integration feature responsible for hundreds of thousands of dollars in revenue for SocialCode."
+                ],
+                "image": "code3.png",
+                "image_color": "#000000"
+            },
+            {
+                "title": "Karat",
+                "subtitles": [
+                    {
+                        "text": "Interview Engineer",
+                        "bold": true
+                    },
+                    {"text": "March 2019 – March 2020"},
+                    {"text": "Remote"}
+                ],
+                "blurbs": [
+                    "Conducted freelance coding interviews with a focus on assessing the foundational coding skills of candidates.",
+                    "Identified issues in candidates’ solutions and helped them find a resolution through pair programming.",
+                    "Authored detailed write-ups that offered an objective and accurate assessment of candidates’ performance."
+                ],
+                "image": "karat.webp"
+            },
+            {
+                "title": "Capital One",
+                "subtitles": [
+                    {
+                        "text": "Associate Data Engineer",
+                        "bold": true
+                    },
+                    {"text": "July 2015 – August 2016"},
+                    {"text": "McLean, VA"}
+                ],
+                "blurbs": [
+                    "Created several prototype web-based applications using Angular.js and D3.js. These include a graph database ontology creator, a test data generation tool, and a data lineage visualizer.",
+                    "Placed 1st of 60 teams in a company-wide security Hackathon, a competition where teams had to “capture flags” using SQL injection, cross-site scripting, and cookie manipulation among other tactics."
+                ],
+                "image": "capital_one.png"
+            },
+            {
+                "title": "Amazon.com",
+                "subtitles": [
+                    {
+                        "text": "SDE Intern",
+                        "bold": true
+                    },
+                    {"text": "May 2014 - Aug 2014"},
+                    {"text": "Seattle, WA"}
+                ],
+                "blurbs": [
+                    "Implemented screen reader support for the GWT-based Amazon Web Services DynamoDB User Interface according to the WAI-ARIA Accessibility Standard.",
+                    "Awarded 5th place of 30 teams in the Global Intern Hackathon, a mobile app development competition."
+                ],
+                "image": "amazon.png"
+            }
         ],
         "placeholder": "${experience.title} Page In Progress"
     },

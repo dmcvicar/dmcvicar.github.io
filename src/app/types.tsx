@@ -8,9 +8,22 @@ interface ContactSite {
     icon_color?: string
 }
 
+interface InfoTabItem {
+    title: string
+    subtitles: Array<InfoSubtitle>
+    blurbs: Array<string>
+    image?: string
+    image_color?: string
+}
+
 interface InfoTabContent {
     title: string
-    items: Array<string>
+    items: Array<InfoTabItem>
+}
+
+interface InfoSubtitle {
+    text: string
+    bold?: boolean
 }
 
 interface Content {
@@ -24,4 +37,4 @@ interface Content {
     contact_sites: Array<ContactSite>
 }
 
-export type { Content, InfoTabContent, ContactSite }
+export type { Content, InfoTabContent, InfoTabItem, ContactSite, InfoSubtitle }
