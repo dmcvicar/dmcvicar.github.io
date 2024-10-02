@@ -1,23 +1,30 @@
-import { Box, Image, Center, VStack } from '@chakra-ui/react'
-import type { Content } from './types'
+import Image from "next/image";
+import type { Content } from "./types";
+import "./globals.css";
 
 interface AboutProps {
-    content: Content
+  content: Content;
 }
 
 export default function About({ content }: AboutProps) {
-    return (
-        <Center>
-            <Box width="500px">
-                <VStack>
-                    <Image src="/images/dave.png" objectFit="contain" alt="Dave" boxSize="500px" padding="10px"/>
-                        <Box p='6'>
-                            <Box display='flex' alignItems='baseline' textAlign="center">
-                                <p>{content.about}</p>
-                            </Box>
-                        </Box>
-                </VStack>
-            </Box>
-        </Center>
-    )
+  return (
+    <div className="flex justify-center">
+      <div className="max-w-screen-md">
+        <div className="flex flex-col items-center">
+          <Image
+            className="object-contain p-4"
+            src="/images/dave.png"
+            width={500}
+            height={500}
+            alt="Dave"
+          />
+          <div className="p-6">
+            <div className="flex items-baseline text-center">
+              <p>{content.about}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
