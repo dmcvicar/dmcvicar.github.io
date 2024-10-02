@@ -1,4 +1,4 @@
-import { Center, Flex, Heading, ListItem, Text, UnorderedList, Image } from '@chakra-ui/react'
+import { Center, Flex, Heading, ListItem, Text, UnorderedList, Image, Card, CardBody } from '@chakra-ui/react'
 import type { InfoTabContent, InfoTabItem } from './types'
 import { ReactNode } from 'react'
 
@@ -20,17 +20,19 @@ function InfoItem({ item_content }: InfoItemProps) {
         subs.push(<Flex key={subtitle.text}>{_sub}</Flex>)
     })
     return (
-        <Flex wrap="wrap" gap="20px" borderWidth="5px" borderRadius="lg" borderColor="gray.500" p="6" justifyContent="center">
-            <Flex direction="column" maxWidth="250px" gap="10px" justifyContent="center">
-                {item_content.image ? <Image src={"/images/" + item_content.image} objectFit="contain" alt={item_content.title} padding="10px" background={item_content.image_color} /> : <Flex><Heading as="h3" size="md">{item_content.title}</Heading></Flex>}
-                <Flex direction="column">{subs}</Flex>
-            </Flex>
-            <Flex direction="column" maxWidth="672px">
-                <UnorderedList>
-                    {item_content.blurbs.map((blurb: string) => <ListItem key={blurb}>{blurb}</ListItem>)}
-                </UnorderedList>
-            </Flex>
-        </Flex>
+        <Card variant='elevated'>
+            <CardBody display="flex" flexWrap="wrap" boxShadow="md" gap="20px"  p="6" justifyContent="center">
+                <Flex direction="column" maxWidth="250px" gap="10px" justifyContent="center">
+                    {item_content.image ? <Image src={"/images/" + item_content.image} objectFit="contain" alt={item_content.title} padding="10px" background={item_content.image_color} /> : <Flex><Heading as="h3" size="md">{item_content.title}</Heading></Flex>}
+                    <Flex direction="column">{subs}</Flex>
+                </Flex>
+                <Flex direction="column" maxWidth="672px">
+                    <UnorderedList>
+                        <Text fontSize="sm">{item_content.blurbs.map((blurb: string) => <ListItem key={blurb}>{blurb}</ListItem>)}</Text>
+                    </UnorderedList>
+                </Flex>
+            </CardBody>
+        </Card>
     )
 }
 

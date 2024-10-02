@@ -1,6 +1,6 @@
 {
-    "about": "David McVicar is a machine learning operations (MLOps) sole proprieter based out of Denver, Colorado. He has 10+ years experience designing cloud-based enterprise machine learning and big data products, with additional expertise on enterprise APIs, data pipelining, CI/CD, and scalable cloud infrastructure.",
-    "button_text": "View Website on GitHub",
+    "about": "David McVicar is a machine learning operations (MLOps) sole proprieter based out of Denver, Colorado. He has 10+ years experience designing cloud-based enterprise machine learning and big data products, with additional expertise with enterprise APIs, data pipelining, CI/CD, and scalable cloud infrastructure.",
+    "button_text": "View Source on GitHub",
     "home_text": "David McVicar",
     "phone": "+1 (703) 881-8757",
     "email": "mlops.solutions@gmail.com",
@@ -57,7 +57,7 @@
                 "image": "ibotta.svg"
             },
             {
-                "title": "Code3",
+                "title": "Decile",
                 "subtitles": [
                     {
                         "text": "Senior Software Engineer",
@@ -66,7 +66,7 @@
                     {"text": "August 2016 – March 2020"},
                     {"text": "Washington, DC"},
                     {
-                        "text": "(Formerly SocialCode)"
+                        "text": "(Formerly known as SocialCode)"
                     }
                 ],
                 "blurbs": [
@@ -75,8 +75,7 @@
                     "Pioneered the use of Airflow through prototypes, facilitating learning sessions, authoring company-specific plugins, and developing a Docker-based Airflow deployment system in Amazon ECS. Airflow became the de-facto job scheduling tool across the company through these efforts.",
                     "Designed and developed a third-party data integration feature responsible for hundreds of thousands of dollars in revenue for SocialCode."
                 ],
-                "image": "code3.png",
-                "image_color": "#000000"
+                "image": "decile.webp"
             },
             {
                 "title": "Karat",
