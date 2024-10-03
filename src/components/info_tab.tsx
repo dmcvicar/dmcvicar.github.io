@@ -27,9 +27,7 @@ function InfoItem(item: InfoTabItem) {
   };
   const img_class =
     "object-contain p-5 " +
-    (item.image_color
-      ? _color_mapping[item.image_color]
-      : "bg-white");
+    (item.image_color ? _color_mapping[item.image_color] : "bg-white");
   item.subtitles.forEach((subtitle) => {
     let _sub = <div>{subtitle.text}</div>;
     if (subtitle.bold) {

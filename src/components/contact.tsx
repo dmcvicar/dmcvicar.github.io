@@ -22,8 +22,8 @@ interface ContactIconProps {
 }
 
 interface ContactProps {
-  button_text: string
-  contact_sites: Array<ContactSite>
+  button_text: string;
+  contact_sites: Array<ContactSite>;
 }
 
 interface ContactInfoProps {
@@ -69,14 +69,14 @@ const ContactIcon = ({
 
 export default function Contact(props: ContactProps) {
   return (
-    <div className="wrap flex flex-wrap items-center justify-between gap-6 bg-slate-500 px-28 py-12 text-white">
+    <div className="wrap flex flex-wrap items-center justify-around gap-6 bg-slate-500 px-8 py-12 text-white">
       <a href="https://github.com/dmcvicar/dmcvicar.github.io">
-        <button className="flex h-10 items-center rounded-md border-solid bg-slate-200 p-2 text-black hover:bg-slate-300 shadow-sm">
+        <button className="flex h-10 items-center rounded-md border-solid bg-slate-200 p-2 text-black shadow-sm hover:bg-slate-300">
           {props.button_text}
           <ContactIcon icon_svgs={[GITHUB_SVG]} marginLeft color="black" />
         </button>
       </a>
-      <div className="flex flex-col pr-28">
+      <div className="flex flex-col">
         <h3 className="text-2xl font-bold">Contact</h3>
         {props.contact_sites.map((site_info: ContactSite) => {
           return ContactInfo({ site_info });

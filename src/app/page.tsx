@@ -2,7 +2,7 @@
 // app/page.tsx
 "use client";
 
-import page_content from "../../public/content/page.json"
+import page_content from "../../public/content/page.json";
 
 export default function Page() {
   return (
@@ -11,7 +11,7 @@ export default function Page() {
         <div className="max-w-screen-md">
           <div className="flex flex-col items-center">
             <img
-              className="object-contain p-4 max-w-xl"
+              className="h-[35rem] w-[35rem] object-contain p-4"
               src="/images/dave.png"
               alt="Dave"
             />
