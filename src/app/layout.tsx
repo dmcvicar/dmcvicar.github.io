@@ -1,5 +1,5 @@
 // app/layout.tsx
-import { Providers } from "./providers";
+
 
 export default function RootLayout({
   children,
@@ -7,10 +7,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+    <html className="size-full" lang="en">
+      <body className="size-full">{children}</body>
     </html>
   );
 }

@@ -1,38 +1,28 @@
+/* eslint-disable @next/next/no-img-element */
 // app/page.tsx
 "use client";
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import About from "./about";
-import Contact from "./contact";
-import InfoTab from "./info_tab";
-import content from "../../public/content.json";
+import page_content from "../../public/content/page.json"
 
 export default function Page() {
   return (
     <div>
-      <Tabs size="lg">
-        <TabList>
-          <Tab>{content.home_text}</Tab>
-          <Tab isDisabled={content.experience.items.length === 0}>
-            {content.experience.title}
-          </Tab>
-          <Tab isDisabled={content.projects.items.length === 0}>
-            {content.projects.title}
-          </Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <About content={content} />
-          </TabPanel>
-          <TabPanel>
-            <InfoTab content={content.experience} />
-          </TabPanel>
-          <TabPanel>
-            <InfoTab content={content.projects} />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-      <Contact content={content} />
+      <div className="flex justify-center">
+        <div className="max-w-screen-md">
+          <div className="flex flex-col items-center">
+            <img
+              className="object-contain p-4 max-w-xl"
+              src="/images/dave.png"
+              alt="Dave"
+            />
+            <div className="p-6">
+              <div className="flex items-baseline text-center">
+                <p>{page_content.about}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
