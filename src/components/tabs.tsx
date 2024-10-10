@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 
 interface TabsProps {
   home_title: string;
-  experience_title: string;
+  resume_title: string;
   projects_title: string;
+  services_title: string;
 }
 
 interface TabProps {
@@ -51,12 +52,15 @@ export default function Tabs(props: TabsProps) {
     <ul className="flex flex-wrap border-b-2 border-gray-200 pl-1 text-center text-lg font-light">
       <Tab href="/" title={props.home_title} active={pathname === "/"} />
       <Tab
-        href="/experience"
-        title={props.experience_title}
-        active={pathname === "/experience"}
+        // href="/services"
+        title={props.services_title}
+        active={pathname === "/services"}
       />
-      {/* <Tab href="/projects" title={props.projects_title} active={pathname === "/projects"}/> */}
-      <Tab title={props.projects_title} active={pathname === "/projects"} />
+      <Tab
+        href="/resume"
+        title={props.resume_title}
+        active={pathname === "/resume"}
+      />
     </ul>
   );
 }
