@@ -51,11 +51,11 @@ export default function Tabs(props: TabsProps) {
   return (
     <ul className="flex flex-wrap border-b-2 border-gray-200 pl-1 text-center text-lg font-light">
       <Tab href="/" title={props.home_title} active={pathname === "/"} />
-      <Tab
-        // href="/services"
+      {/* <Tab
+        href="/services"
         title={props.services_title}
         active={pathname === "/services"}
-      />
+      /> */}
       <Tab
         href="/resume"
         title={props.resume_title}
