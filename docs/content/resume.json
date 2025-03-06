@@ -4,7 +4,11 @@
       "title": "KeenSP",
       "subtitles": [
         {
-          "text": "Founder and Head of Engineering",
+          "text": "Founding CEO",
+          "bold": true
+        },
+        {
+          "text": "Lead Developer",
           "bold": true
         },
         {
