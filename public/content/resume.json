@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "title": "KeenSP",
+      "subtitles": [
+        {
+          "text": "Founder and Head of Engineering",
+          "bold": true
+        },
+        {
+          "text": "September 2024 - Present"
+        },
+        {
+          "text": "Remote"
+        }
+      ],
+      "blurbs": [
+        "Founded Keen Software Platforms, a company that specializes in bringing app ideas to life for early stage start-ups.",
+        "Lead the engineering effort of an early-stage startup. Similar in function to a Founding Engineer.",
+        "Personally developed app prototypes and features to enable successful demos and customer pilots.",
+        "Provided guidance to the client regarding technical direction, user experience, security, personnel, and overall design of their app."
+      ]
+    },
+    {
       "title": "Blacksky",
       "subtitles": [
         {

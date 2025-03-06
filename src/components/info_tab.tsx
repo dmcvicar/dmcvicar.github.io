@@ -49,8 +49,8 @@ function InfoItem(item: InfoTabItem) {
             alt={item.title}
           />
         ) : (
-          <div className="flex">
-            <h2 className="text-xl">{item.title}</h2>
+          <div className="flex p-4 border-8 border-slate-300">
+            <h2 className="text-6xl text-slate-600">{item.title}</h2>
           </div>
         )}
         <div className="flex flex-col">{subs}</div>

@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <InfoTab {...resume_content} />
       <div className="flex mt-8 justify-center text-lg hover:underline">
-        <a href="/David McVicar - Resume 09_24.pdf">Resume as PDF</a>
+        <a href="/David McVicar - Resume.pdf">Resume as PDF</a>
       </div>
     </>
   );
